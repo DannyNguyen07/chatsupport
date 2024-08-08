@@ -71,7 +71,13 @@ export default function Home() {
                 bgcolor={message.role === 'assistant' ? 'primary.main' : 'secondary.main'}
                 color='white'
                 borderRadius={16}
-                p={2}
+                p={3}
+                sx={{ 
+                  maxWidth: '75%', 
+                  wordBreak: 'break-word', 
+                  whiteSpace: 'pre-wrap',
+                  overflowWrap: 'break-word'
+                }}
               >
                 <ReactMarkdown>{message.content}</ReactMarkdown>
               </Box>
